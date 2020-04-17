@@ -277,11 +277,17 @@ function get20s(arr){
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(arr){
+  let resultArr = [];
 
-    /* Code here */
-
+  for (let artist of arr) {
+    if (artist.paintings > 100) resultArr.push(artist.name);
   }
+
+  return resultArr;
+}
+
+// console.log(lotsOfArt(artists));
 
 
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
