@@ -208,9 +208,16 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
+// console.log(artists[0].name);
+// console.log(artists[2].bio);
+
 
 
 /* Task 2: There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+
+artists[8].name = "Vincent Van Gogh";
+
+// console.log(artists[8].name);
 
 
 
@@ -223,8 +230,10 @@ const artists = [
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(id, name) {
-    /* code here */
-  }
+    return `The artist at index ${id} is ${artists[0].name}`;
+}
+
+// console.log(getArtistByIndex(0));
   
   /**
 
@@ -237,28 +246,48 @@ function getArtistByIndex(id, name) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-    /* code here */
-  }
+function removeArtist(arr, arrIndex) {
+    arr.splice(arrIndex, 1);
+
+}
+
+// removeArtist(artists, 0);
+
+// console.log(artists);
   
   /**
 
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
+function get20s(arr){
+  let resultArr = [];
 
-    /* Code here */
-
+  for (let artist of arr) {
+    let birthYear = Number(artist.years.slice(0, 4));
+    if (birthYear >= 1800 && birthYear <= 1900) {
+      resultArr.push(artist.name);
+    }
   }
+
+  return resultArr;
+}
+
+// console.log(get20s(artists));
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */){
+function lotsOfArt(arr){
+  let resultArr = [];
 
-    /* Code here */
-
+  for (let artist of arr) {
+    if (artist.paintings > 100) resultArr.push(artist.name);
   }
+
+  return resultArr;
+}
+
+// console.log(lotsOfArt(artists));
 
 
 /* Task 7: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
@@ -270,21 +299,37 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(info){
+  artists.push(info);
+}
 
-    /* Code here */
-
+/*
+addArtist(
+  {
+    id: 20,
+    name: "James Ensor",
+    years: "1860 - 1949",
+    genre: "Expressionism,Surrealism",
+    nationality: "Belgian",
+    bio: "James was a Belgian painter and printmaker, an important influence on expressionism and surrealism who lived in Ostend for most of his life. He was associated with the artistic group Les XX.",
   }
+);
 
+console.log(artists);
+*/
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
-
-    /* Code here */
-
+function checkArtist(name){
+  for (let person of artists) {
+    if (person.name == name) return true;
   }
 
+  return false;
+}
+
+// console.log(checkArtist("Diego Rivera"));
+// console.log(checkArtist("Michael Jackson"));
 
 
 

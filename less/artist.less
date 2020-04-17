@@ -1,0 +1,31 @@
+#artist {
+    display: flex;
+    flex-direction: column;
+    padding-top: @basic-gutter;
+    margin-left: @basic-gutter;
+    margin-right: @basic-gutter;
+    .add-border(top);
+
+    @media @tablet {
+        flex-direction: row;
+        justify-content: space-between;
+
+        .artist-item {
+            width: 45%;
+            margin-right: @basic-gutter;
+        }
+    }
+    
+    .artist-item {
+        margin-bottom: @basic-gutter;
+
+        .picture {
+            display: block;
+            overflow: hidden;
+
+            img {
+                height: 32rem;
+            }
+        }
+    }
+}

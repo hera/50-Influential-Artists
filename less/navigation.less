@@ -1,0 +1,42 @@
+
+
+header {
+    margin-bottom: @basic-gutter;
+    .add-border(bottom);
+
+    @media @desktop {
+        border: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+        @media @desktop {
+            margin-top: @basic-gutter;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        a {
+            line-height: 6rem;
+            text-decoration: none;
+            text-align: center;
+
+            @media @desktop {
+                line-height: 1;
+                margin-right: @basic-gutter / 2;
+                padding-right: @basic-gutter / 2;
+                .add-border(right);
+                
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+
+            &.active {
+                font-weight: bold;
+            }
+        }
+    }
+}

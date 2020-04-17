@@ -1,0 +1,22 @@
+.smooth-transition(@property) {
+    transition: @property 0.4s ease;
+}
+
+.create-button(@bg-color:white, @radius: @button-border-radius) {
+    background-color: @bg-color;
+    border-radius: @radius;
+    color: @button-font-color;
+    text-decoration: none;
+    line-height: 4rem;
+    padding: 0 2rem;
+    .smooth-transition(background-color);
+
+    &:hover {
+        background-color: darken(@bg-color, 10%);
+        color: @button-font-color;
+    }
+}
+
+.add-border(@location) {
+    border-@{location}: 1px solid @border-color;
+}
