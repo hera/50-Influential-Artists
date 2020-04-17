@@ -299,12 +299,24 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
+function addArtist(info){
+  artists.push(info);
+}
 
-    /* Code here */
-
+/*
+addArtist(
+  {
+    id: 20,
+    name: "James Ensor",
+    years: "1860 - 1949",
+    genre: "Expressionism,Surrealism",
+    nationality: "Belgian",
+    bio: "James was a Belgian painter and printmaker, an important influence on expressionism and surrealism who lived in Ostend for most of his life. He was associated with the artistic group Les XX.",
   }
+);
 
+console.log(artists);
+*/
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
