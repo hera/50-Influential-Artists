@@ -320,12 +320,16 @@ console.log(artists);
 
 /* Task 8: Create a function called `checkArtist` that accepts a string (name of an artist) and checks if that artist is in the dataset. */
 
-function checkArtist(/* Code here */){
-
-    /* Code here */
-
+function checkArtist(name){
+  for (let person of artists) {
+    if (person.name == name) return true;
   }
 
+  return false;
+}
+
+// console.log(checkArtist("Diego Rivera"));
+// console.log(checkArtist("Michael Jackson"));
 
 
 
