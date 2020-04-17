@@ -208,8 +208,8 @@ const artists = [
 (1) Name of the first artist in the array
 (2) Bio of the third artist in the array */
 
-console.log(artists[0].name);
-console.log(artists[2].bio);
+// console.log(artists[0].name);
+// console.log(artists[2].bio);
 
 
 
@@ -217,7 +217,7 @@ console.log(artists[2].bio);
 
 artists[8].name = "Vincent Van Gogh";
 
-console.log(artists[8].name);
+// console.log(artists[8].name);
 
 
 
@@ -233,7 +233,7 @@ function getArtistByIndex(id, name) {
     return `The artist at index ${id} is ${artists[0].name}`;
 }
 
-console.log(getArtistByIndex(0));
+// console.log(getArtistByIndex(0));
   
   /**
 
@@ -255,11 +255,20 @@ function removeArtist(/*code here*/) {
 
 /* Task 5: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
+function get20s(arr){
+  let resultArr = [];
 
-    /* Code here */
-
+  for (let artist of arr) {
+    let birthYear = Number(artist.years.slice(0, 4));
+    if (birthYear >= 1800 && birthYear <= 1900) {
+      resultArr.push(artist.name);
+    }
   }
+
+  return resultArr;
+}
+
+// console.log(get20s(artists));
 
 /* Task 6: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
