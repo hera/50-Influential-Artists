@@ -30,3 +30,14 @@ header nav a {
 header nav a.active {
   font-weight: bold;
 }
+#cta {
+  background-image: url("../assets/home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
