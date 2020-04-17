@@ -51,8 +51,8 @@ h5 {
   color: #444444;
 }
 header {
-  border-bottom: 1px solid #dddddd;
   margin-bottom: 3rem;
+  border-bottom: 1px solid #dddddd;
 }
 header nav {
   display: flex;
