@@ -92,6 +92,16 @@ header nav a.active {
   margin-right: 3rem;
   border-top: 1px solid #dddddd;
 }
+@media (min-width: 768px) {
+  #artist {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #artist .artist-item {
+    width: 45%;
+    margin-right: 3rem;
+  }
+}
 #artist .artist-item {
   margin-bottom: 3rem;
 }
