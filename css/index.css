@@ -1,1 +1,11 @@
 @import "../css/normalize.css";
+body {
+  color: #444444;
+}
+a {
+  color: #444444;
+  text-decoration: underline;
+}
+a:hover {
+  color: #3464eb;
+}
