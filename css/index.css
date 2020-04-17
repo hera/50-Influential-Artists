@@ -57,9 +57,15 @@ header nav a.active {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  color: white;
   min-height: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+#cta h2 {
+  text-align: center;
 }
