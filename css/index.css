@@ -50,6 +50,13 @@ h5 {
   background-color: #e6e6e6;
   color: #444444;
 }
+/* Images */
+img {
+  transition: opacity 0.4s ease;
+}
+img:hover {
+  opacity: 0.8;
+}
 header {
   margin-bottom: 3rem;
   border-bottom: 1px solid #dddddd;
@@ -110,6 +117,10 @@ header nav a.active {
   padding-top: 6rem;
   padding-bottom: 6rem;
   margin-bottom: 3rem;
+  transition: opacity 0.4s ease;
+}
+#cta:hover {
+  opacity: 0.8;
 }
 #cta h2 {
   text-align: center;
