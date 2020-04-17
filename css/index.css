@@ -14,3 +14,19 @@ a {
 a:hover {
   color: #3464eb;
 }
+header {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 3rem;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+}
+header nav a {
+  line-height: 6rem;
+  text-decoration: none;
+  text-align: center;
+}
+header nav a.active {
+  font-weight: bold;
+}
