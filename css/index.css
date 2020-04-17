@@ -105,9 +105,10 @@ header nav a.active {
 #artist .artist-item {
   margin-bottom: 3rem;
 }
-#artist .artist-item a {
+#artist .artist-item .picture {
   display: block;
+  overflow: hidden;
 }
-#artist .artist-item a img {
-  width: 100%;
+#artist .artist-item .picture img {
+  height: 32rem;
 }
